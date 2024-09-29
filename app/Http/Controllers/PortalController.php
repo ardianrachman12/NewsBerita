@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
+use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Facades\Http;
 
 class PortalController extends Controller
@@ -17,17 +19,34 @@ class PortalController extends Controller
         //endpoint 7 untuk republika news
         $data = $response->json()['endpoints'][7]['paths'];
         $i = 0;
-        $j = 0;
         $categorypath = [];
-        $post = [];
         foreach ($data as $key) {
             $urlpath = $key['path'];
             $category = Http::get($urlpath);
             $categorypath[$i] = $category->json();
             $i++;
         }
+        // Tentukan jumlah item per halaman
+        $perPage = 4;
+
+        // Dapatkan halaman saat ini atau default ke 1
+        $currentPage = LengthAwarePaginator::resolveCurrentPage();
+
+        // Tentukan data yang akan ditampilkan pada halaman saat ini
+        $currentItems = array_slice($categorypath, ($currentPage - 1) * $perPage, $perPage);
+
+        // Buat instance dari LengthAwarePaginator
+        $paginatedItems = new LengthAwarePaginator(
+            $currentItems, // The items for the current page
+            count($categorypath), // Total items
+            $perPage, // Items per page
+            $currentPage, // Current page
+            ['path' => request()->url(), 'query' => request()->query()] // The path for the pagination links
+        );
+
+        return view('portal.vendor-one', ['categorypath' => $paginatedItems]);
         // dd($categorypath[2]);
-        return view('portal.vendor-one', compact('categorypath'));
+        // return view('portal.vendor-one', compact('categorypath'));
     }
     public function vendorTwo()
     {
@@ -35,9 +54,7 @@ class PortalController extends Controller
         //endpoint 0 untuk cnn news
         $data = $response->json()['endpoints'][2]['paths'];
         $i = 0;
-        $j = 0;
         $categorypath = [];
-        $post = [];
         foreach ($data as $key) {
             $urlpath = $key['path'];
             $category = Http::get($urlpath);

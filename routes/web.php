@@ -16,6 +16,6 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [PortalController::class, 'index'])->name('portal.index');
-Route::get('/RepublikaNews', [PortalController::class, 'vendorOne'])->name('portal.vendorOne');
-Route::get('/CnnNews', [PortalController::class, 'vendorTwo'])->name('portal.vendorTwo');
-Route::get('/AntaraNews', [PortalController::class, 'vendorThree'])->name('portal.vendorThree');
+Route::get('/vendorOne', [PortalController::class, 'vendorOne'])->name('portal.vendorOne');
+Route::get('/vendorTwo', [PortalController::class, 'vendorTwo'])->name('portal.vendorTwo');
+Route::get('/vendorThree', [PortalController::class, 'vendorThree'])->name('portal.vendorThree');

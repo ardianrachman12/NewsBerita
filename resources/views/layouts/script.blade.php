@@ -7,3 +7,4 @@
 
 <!-- Template Main JS File -->
 <script src="{{asset('theevent/assets/js/main.js')}}"></script>
+@stack('script')

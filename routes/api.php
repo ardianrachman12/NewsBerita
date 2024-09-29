@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\API\ApiPortalController;
 use App\Http\Controllers\PortalController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -20,3 +21,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/game', [PortalController::class, 'game']);
+
+Route::get('/vendorOne', [ApiPortalController::class, 'vendorOne']);
+Route::get('/yutub', [ApiPortalController::class, 'getTikTokTags']);
+Route::post('/download', [ApiPortalController::class, 'downloadVideo']);
