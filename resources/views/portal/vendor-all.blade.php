@@ -2,7 +2,7 @@
 @section('content')
     <main id="main" class="main-page">
         <section id="hotels" class="section-with-bg">
-            @include('portal.main-news')
+            @include('portal.partials.all-news')
         </section>
     </main>
 @endsection
