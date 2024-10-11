@@ -9,7 +9,7 @@
         { "src": "/(.*)", "dest": "/api/index.php" }
     ],
     "public": true,
-    "buildCommand": "vite build",
+    "buildCommand": "composer install --no-dev --ignore-platform-reqs && php artisan config:cache && php artisan route:cache && php artisan view:cache",
     "outputDirectory": "public",
     "env": {
         "APP_ENV": "production",
