@@ -11,12 +11,7 @@
 @endsection
 @section('content')
     <main id="main">
-        <!-- Alert untuk menampilkan error -->
-        @if (session('error'))
-            <div class="alert alert-danger" role="alert" style="margin: 20px;">
-                {{ session('error') }}
-            </div>
-        @endif
+        @include('layouts.alert')
         <section id="speakers">
             <div class="container" data-aos="fade-up">
                 <div class="section-header">

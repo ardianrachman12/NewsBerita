@@ -23,5 +23,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/game', [PortalController::class, 'game']);
 
 Route::get('/vendorOne', [ApiPortalController::class, 'vendorOne']);
+Route::get('/vendorFour', [ApiPortalController::class, 'vendorFour']);
 Route::get('/yutub', [ApiPortalController::class, 'getTikTokTags']);
 Route::post('/download', [ApiPortalController::class, 'downloadVideo']);

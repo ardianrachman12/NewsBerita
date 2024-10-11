@@ -130,4 +130,31 @@ class ApiPortalController extends Controller
             ], 500);
         }
     }
+
+    public function vendorFour(){
+        $response = Http::get('https://api-berita-indonesia.vercel.app/kumparan/terbaru/');
+        $data = $response->json();
+        return response()->json($data);
+    }
+    
+    public function game()
+    {
+        $baseUrl = "https://api.gamestoreindonesia.com/v1/order/prepare/MOBILE_LEGENDS";
+
+        $response = Http::withHeaders([
+            'Content-Type' => 'application/json',
+        ])->get($baseUrl, [
+            'userId' => '122761840',
+            'zoneId' => '2610',
+        ]);
+
+        if ($response->successful()) {
+            $responseData = $response->json();
+            $responseData['userId'] = '122761840'; // Masukkan userId ke dalam respons JSON
+            $responseData['zoneId'] = '2610'; // Masukkan zoneId ke dalam respons JSON
+            return $responseData;
+        } else {
+            return response()->json(['error' => 'Account not found'], $response->status());
+        }
+    }
 }

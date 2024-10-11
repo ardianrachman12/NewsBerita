@@ -1,3 +1,4 @@
+{{-- untuk menampilkan keseluruhan berita berdasarkan kategorinya --}}
 @foreach ($categorypath as $category)
     <div class="container mb-2" data-aos="fade-up">
         <div class="section-header">

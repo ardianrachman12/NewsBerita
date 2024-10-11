@@ -12,5 +12,7 @@
 <link href="{{asset('theevent/assets/vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
 <link href="{{asset('theevent/assets/vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
 <!-- Template Main CSS File -->
 <link href="{{asset('theevent/assets/css/style.css')}}" rel="stylesheet">
