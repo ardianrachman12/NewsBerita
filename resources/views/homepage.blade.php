@@ -23,7 +23,7 @@
                     <div class="col-lg-3 mx-auto col-md-6 col-sm-6">
                         <div class="speaker" data-aos="fade-up" data-aos-delay="100">
                             <a href="{{ route('portal.vendorOne') }}"><img
-                                    src="{{ asset('news-vendor-logo/republika.png') }}" alt="republika_news"
+                                    src="{{ asset('img/republika.png') }}" alt="republika_news"
                                     class="img-fluid" /></a>
                             <div class="details">
                                 <h3><a href="{{ route('portal.vendorOne') }}">Republika News</a></h3>
@@ -57,7 +57,7 @@
                     <div class="col-lg-3 mx-auto col-md-6 col-sm-6">
                         <div class="speaker" data-aos="fade-up" data-aos-delay="300">
                             <a href="{{ route('portal.vendorThree') }}"><img
-                                    src="{{ asset('news-vendor-logo/jpnn-logo.png') }}" alt="Jpnn_news"
+                                    src="{{ asset('img/jpnn-logo.png') }}" alt="Jpnn_news"
                                     class="img-fluid" /></a>
                             <div class="details">
                                 <h3><a href="{{ route('portal.vendorThree') }}">JPNN News</a></h3>

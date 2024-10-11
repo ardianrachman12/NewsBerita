@@ -5,7 +5,7 @@
             <div class="row">
 
                 <div class="col-lg-4 col-md-6 footer-info">
-                    <img src="{{ asset('logo/bn-animate.gif') }}" alt="TheEvenet">
+                    <img src="{{ asset('img/bn-animate.gif') }}" alt="TheEvenet">
                     <p>Komitmen kami adalah menyediakan platform yang mudah digunakan, informatif, dan memungkinkan
                         pengguna untuk mendapatkan wawasan yang beragam dari sumber-sumber berita yang mereka percayai.
                     </p>

@@ -5,7 +5,7 @@
         <div id="logo" class="me-auto">
             <!-- Uncomment below if you prefer to use a text logo -->
             <!-- <h1><a href="index.html">The<span>Event</span></a></h1>-->
-            <a href="{{ route('portal.index') }}" class="scrollto"><img src="{{ asset('logo/news.png') }}" alt=""
+            <a href="{{ route('portal.index') }}" class="scrollto"><img src="{{ asset('img/news.png') }}" alt=""
                     title=""></a>
         </div>
 
@@ -19,14 +19,14 @@
                         <li><a href="{{ route('portal.vendorOne') }}">Republika News</a></li>
                         <li><a href="{{ route('portal.vendorTwo') }}">CNN News</a></li>
                         <li><a href="{{ route('portal.vendorThree') }}">JPNN News</a></li>
-                        <li class="dropdown"><a href="#"><span>CNN News</span> <i
+                        {{-- <li class="dropdown"><a href="#"><span>CNN News</span> <i
                                     class="bi bi-chevron-right"></i></a>
                             <ul>
                                 <li><a href="#">terbaru</a></li>
                                 <li><a href="#">olahraga</a></li>
                                 <li><a href="#">teknologi</a></li>
                             </ul>
-                        </li>
+                        </li> --}}
                     </ul>
                 </li>
                 <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
