@@ -19,23 +19,43 @@ Route::get('/', [PortalController::class, 'index'])->name('portal.index');
 Route::get('/vendorOne', [PortalController::class, 'vendorOne'])->name('portal.vendorOne');
 Route::get('/vendorTwo', [PortalController::class, 'vendorTwo'])->name('portal.vendorTwo');
 Route::get('/vendorThree', [PortalController::class, 'vendorThree'])->name('portal.vendorThree');
-// Route::get('/kumparan/terbaru', [PortalController::class, 'kumparan_terbaru'])->name('portal.kumparan.terbaru');
-Route::prefix('/CNN')->group(function () {
-    Route::get('/terbaru', [PortalController::class, 'cnn_terbaru'])->name('portal.cnn.terbaru');
-    Route::get('/tekno', [PortalController::class, 'cnn_teknologi'])->name('portal.cnn.teknologi');
-    Route::get('/olahraga', [PortalController::class, 'cnn_olahraga'])->name('portal.cnn.olahraga');
-    Route::get('/hiburan', [PortalController::class, 'cnn_hiburan'])->name('portal.cnn.hiburan');
-    Route::get('/dunia', [PortalController::class, 'cnn_dunia'])->name('portal.cnn.dunia');
-    Route::get('/otomotif', [PortalController::class, 'cnn_otomotif'])->name('portal.cnn.otomotif');
-    Route::get('/politik', [PortalController::class, 'cnn_politik'])->name('portal.cnn.politik');
-    Route::get('/hukum', [PortalController::class, 'cnn_hukum'])->name('portal.cnn.hukum');
-    Route::get('/ekonomi', [PortalController::class, 'cnn_ekonomi'])->name('portal.cnn.ekonomi');
-    Route::get('/bola', [PortalController::class, 'cnn_bola'])->name('portal.cnn.bola');
-    Route::get('/humaniora', [PortalController::class, 'cnn_humaniora'])->name('portal.cnn.humaniora');
-    Route::get('/lifestyle', [PortalController::class, 'cnn_lifestyle'])->name('portal.cnn.lifestyle');
+Route::get('/vendorFour', [PortalController::class, 'vendorFour'])->name('portal.vendorFour');
+Route::get('/vendorFive', [PortalController::class, 'vendorFive'])->name('portal.vendorFive');
+Route::get('/vendorSix', [PortalController::class, 'vendorSix'])->name('portal.vendorSix');
+
+Route::prefix('/Antara')->group(function () {
+    Route::get('/terbaru', [PortalController::class, 'antara_terbaru'])->name('portal.antara.terbaru');
+    Route::get('/tekno', [PortalController::class, 'antara_tekno'])->name('portal.antara.tekno');
+    Route::get('/olahraga', [PortalController::class, 'antara_olahraga'])->name('portal.antara.olahraga');
+    Route::get('/hiburan', [PortalController::class, 'antara_hiburan'])->name('portal.antara.hiburan');
+    Route::get('/dunia', [PortalController::class, 'antara_dunia'])->name('portal.antara.dunia');
+    Route::get('/otomotif', [PortalController::class, 'antara_otomotif'])->name('portal.antara.otomotif');
+    Route::get('/politik', [PortalController::class, 'antara_politik'])->name('portal.antara.politik');
+    Route::get('/hukum', [PortalController::class, 'antara_hukum'])->name('portal.antara.hukum');
+    Route::get('/ekonomi', [PortalController::class, 'antara_ekonomi'])->name('portal.antara.ekonomi');
+    Route::get('/bola', [PortalController::class, 'antara_bola'])->name('portal.antara.bola');
+    Route::get('/humaniora', [PortalController::class, 'antara_humaniora'])->name('portal.antara.humaniora');
+    Route::get('/lifestyle', [PortalController::class, 'antara_lifestyle'])->name('portal.antara.lifestyle');
 });
 Route::prefix('/Republika')->group(function () {
     Route::get('/terbaru', [PortalController::class, 'republika_terbaru'])->name('portal.republika.terbaru');
     Route::get('/news', [PortalController::class, 'republika_news'])->name('portal.republika.news');
     Route::get('/daerah', [PortalController::class, 'republika_daerah'])->name('portal.republika.daerah');
+    Route::get('/khazanah', [PortalController::class, 'republika_khazanah'])->name('portal.republika.khazanah');
+    Route::get('/islam', [PortalController::class, 'republika_islam'])->name('portal.republika.islam');
+    Route::get('/bola', [PortalController::class, 'republika_bola'])->name('portal.republika.bola');
+    Route::get('/internasional', [PortalController::class, 'republika_daerah'])->name('portal.republika.daerah');
+    Route::get('/leisure', [PortalController::class, 'republika_daerah'])->name('portal.republika.daerah');
+});
+Route::get('/JPNN/terbaru', [PortalController::class, 'jpnn_terbaru'])->name('portal.jpnn.terbaru');
+Route::get('/Kumparan/terbaru', [PortalController::class, 'kumparan_terbaru'])->name('portal.kumparan.terbaru');
+Route::prefix('/CNN')->group(function () {
+    Route::get('/terbaru', [PortalController::class, 'cnn_terbaru'])->name('portal.cnn.terbaru');
+    Route::get('/teknologi', [PortalController::class, 'cnn_teknologi'])->name('portal.cnn.teknologi');
+    Route::get('/olahraga', [PortalController::class, 'cnn_olahraga'])->name('portal.cnn.olahraga');
+    Route::get('/hiburan', [PortalController::class, 'cnn_hiburan'])->name('portal.cnn.hiburan');
+    Route::get('/nasional', [PortalController::class, 'cnn_nasional'])->name('portal.cnn.nasional');
+    Route::get('/internasional', [PortalController::class, 'cnn_internasional'])->name('portal.cnn.internasional');
+    Route::get('/ekonomi', [PortalController::class, 'cnn_ekonomi'])->name('portal.cnn.ekonomi');
+    Route::get('/gayaHidup', [PortalController::class, 'cnn_gayaHidup'])->name('portal.cnn.gayaHidup');
 });

@@ -2,7 +2,7 @@
     <div class="container" data-aos="fade-up">
         <div class="section-header">
             <h2>Category of News Vendor</h2>
-            <p>Here are some category of our news vendor</p>
+            <p>Here are some category of our {{$vendor}} News</p>
         </div>
         @include('layouts.alert')
         <div class="row px-4" data-aos="fade-up" data-aos-delay="100">

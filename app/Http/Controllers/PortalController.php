@@ -19,7 +19,8 @@ class PortalController extends Controller
                 throw new \Exception('Gagal mengakses API utama.');
             }
             $category = $response->json()['endpoints'][0]['paths'];
-            $vendor = "CNN";
+            $vendor = "Antara";
+            // dd($category);
             return view('portal.vendor', ['category' => $category, 'vendor' => $vendor]);
         } catch (\Exception $e) {
             // Redirect ke halaman home dengan pesan error
@@ -48,7 +49,7 @@ class PortalController extends Controller
             if ($response->failed() || is_null($response->json())) {
                 throw new \Exception('Gagal mengakses API utama.');
             }
-            $category = $response->json()['endpoints'][2]['paths'];
+            $category = $response->json()['endpoints'][3]['paths'];
             $vendor = "JPNN";
             return view('portal.vendor', ['category' => $category, 'vendor' => $vendor]);
         } catch (\Exception $e) {
@@ -56,18 +57,53 @@ class PortalController extends Controller
             return redirect('/')->with('error', $e->getMessage());
         }
     }
+    public function vendorFour()
+    {
+         try {
+            $response = Http::get('https://api-berita-indonesia.vercel.app/');
+            if ($response->failed() || is_null($response->json())) {
+                throw new \Exception('Gagal mengakses API utama.');
+            }
+            $category = $response->json()['endpoints'][4]['paths'];
+            $vendor = "Kumparan";
+            return view('portal.vendor', ['category' => $category, 'vendor' => $vendor]);
+        } catch (\Exception $e) {
+            // Redirect ke halaman home dengan pesan error
+            return redirect('/')->with('error', $e->getMessage());
+        }
+    }
+    public function vendorFive()
+    {
+         try {
+            $response = Http::get('https://api-berita-indonesia.vercel.app/');
+            if ($response->failed() || is_null($response->json())) {
+                throw new \Exception('Gagal mengakses API utama.');
+            }
+            $category = $response->json()['endpoints'][2]['paths'];
+            $vendor = "CNN";
+            return view('portal.vendor', ['category' => $category, 'vendor' => $vendor]);
+        } catch (\Exception $e) {
+            // Redirect ke halaman home dengan pesan error
+            return redirect('/')->with('error', $e->getMessage());
+        }
+    }
 
+    // vendor four
     public function kumparan_terbaru()
     {
         $response = Http::get('https://api-berita-indonesia.vercel.app/kumparan/terbaru/');
         $category = $response->json();
+        if (isset($category['success']) && $category['success'] === false) {
+            // Redirect back dengan flash message
+            return redirect()->back()->with('error', $category['message']);
+        }
         return view('portal.news', compact('category'));
     }
 
     // vendor one
-    public function cnn_terbaru()
+    public function antara_terbaru()
     {
-        $response = Http::get('https://api-berita-indonesia.vercel.app/cnn/terbaru/');
+        $response = Http::get('https://api-berita-indonesia.vercel.app/antara/terbaru/');
         $category = $response->json();
         if (isset($category['success']) && $category['success'] === false) {
             // Redirect back dengan flash message
@@ -75,9 +111,9 @@ class PortalController extends Controller
         }
         return view('portal.news', compact('category'));
     }
-    public function cnn_teknologi()
+    public function antara_tekno()
     {
-        $response = Http::get('https://api-berita-indonesia.vercel.app/cnn/teknologi/');
+        $response = Http::get('https://api-berita-indonesia.vercel.app/antara/tekno/');
         $category = $response->json();
         if (isset($category['success']) && $category['success'] === false) {
             // Redirect back dengan flash message
@@ -85,9 +121,9 @@ class PortalController extends Controller
         }
         return view('portal.news', compact('category'));
     }
-    public function cnn_olahraga()
+    public function antara_olahraga()
     {
-        $response = Http::get('https://api-berita-indonesia.vercel.app/cnn/olahraga/');
+        $response = Http::get('https://api-berita-indonesia.vercel.app/antara/olahraga/');
         $category = $response->json();
         if (isset($category['success']) && $category['success'] === false) {
             // Redirect back dengan flash message
@@ -95,9 +131,9 @@ class PortalController extends Controller
         }
         return view('portal.news', compact('category'));
     }
-    public function cnn_politik()
+    public function antara_politik()
     {
-        $response = Http::get('https://api-berita-indonesia.vercel.app/cnn/politik/');
+        $response = Http::get('https://api-berita-indonesia.vercel.app/antara/politik/');
         $category = $response->json();
         if (isset($category['success']) && $category['success'] === false) {
             // Redirect back dengan flash message
@@ -105,9 +141,9 @@ class PortalController extends Controller
         }
         return view('portal.news', compact('category'));
     }
-    public function cnn_humaniora()
+    public function antara_humaniora()
     {
-        $response = Http::get('https://api-berita-indonesia.vercel.app/cnn/humaniora/');
+        $response = Http::get('https://api-berita-indonesia.vercel.app/antara/humaniora/');
         $category = $response->json();
         if (isset($category['success']) && $category['success'] === false) {
             // Redirect back dengan flash message
@@ -115,9 +151,9 @@ class PortalController extends Controller
         }
         return view('portal.news', compact('category'));
     }
-    public function cnn_hukum()
+    public function antara_hukum()
     {
-        $response = Http::get('https://api-berita-indonesia.vercel.app/cnn/hukum/');
+        $response = Http::get('https://api-berita-indonesia.vercel.app/antara/hukum/');
         $category = $response->json();
         if (isset($category['success']) && $category['success'] === false) {
             // Redirect back dengan flash message
@@ -125,9 +161,9 @@ class PortalController extends Controller
         }
         return view('portal.news', compact('category'));
     }
-    public function cnn_ekonomi()
+    public function antara_ekonomi()
     {
-        $response = Http::get('https://api-berita-indonesia.vercel.app/cnn/ekonomi/');
+        $response = Http::get('https://api-berita-indonesia.vercel.app/antara/ekonomi/');
         $category = $response->json();
         if (isset($category['success']) && $category['success'] === false) {
             // Redirect back dengan flash message
@@ -135,9 +171,9 @@ class PortalController extends Controller
         }
         return view('portal.news', compact('category'));
     }
-    public function cnn_bola()
+    public function antara_bola()
     {
-        $response = Http::get('https://api-berita-indonesia.vercel.app/cnn/bola/');
+        $response = Http::get('https://api-berita-indonesia.vercel.app/antara/bola/');
         $category = $response->json();
         if (isset($category['success']) && $category['success'] === false) {
             // Redirect back dengan flash message
@@ -145,9 +181,9 @@ class PortalController extends Controller
         }
         return view('portal.news', compact('category'));
     }
-    public function cnn_lifestyle()
+    public function antara_lifestyle()
     {
-        $response = Http::get('https://api-berita-indonesia.vercel.app/cnn/lifestyle/');
+        $response = Http::get('https://api-berita-indonesia.vercel.app/antara/lifestyle/');
         $category = $response->json();
         if (isset($category['success']) && $category['success'] === false) {
             // Redirect back dengan flash message
@@ -155,9 +191,9 @@ class PortalController extends Controller
         }
         return view('portal.news', compact('category'));
     }
-    public function cnn_hiburan()
+    public function antara_hiburan()
     {
-        $response = Http::get('https://api-berita-indonesia.vercel.app/cnn/hiburan/');
+        $response = Http::get('https://api-berita-indonesia.vercel.app/antara/hiburan/');
         $category = $response->json();
         if (isset($category['success']) && $category['success'] === false) {
             // Redirect back dengan flash message
@@ -165,9 +201,9 @@ class PortalController extends Controller
         }
         return view('portal.news', compact('category'));
     }
-    public function cnn_dunia()
+    public function antara_dunia()
     {
-        $response = Http::get('https://api-berita-indonesia.vercel.app/cnn/dunia/');
+        $response = Http::get('https://api-berita-indonesia.vercel.app/antara/dunia/');
         $category = $response->json();
         if (isset($category['success']) && $category['success'] === false) {
             // Redirect back dengan flash message
@@ -175,9 +211,9 @@ class PortalController extends Controller
         }
         return view('portal.news', compact('category'));
     }
-    public function cnn_otomotif()
+    public function antara_otomotif()
     {
-        $response = Http::get('https://api-berita-indonesia.vercel.app/cnn/otomotif/');
+        $response = Http::get('https://api-berita-indonesia.vercel.app/antara/otomotif/');
         $category = $response->json();
         if (isset($category['success']) && $category['success'] === false) {
             // Redirect back dengan flash message
@@ -217,4 +253,148 @@ class PortalController extends Controller
         }
         return view('portal.news', compact('category'));
     }
+    public function republika_khazanah()
+    {
+        $response = Http::get('https://api-berita-indonesia.vercel.app/republika/khazanah/');
+        $category = $response->json();
+        if (isset($category['success']) && $category['success'] === false) {
+            // Redirect back dengan flash message
+            return redirect()->back()->with('error', $category['message']);
+        }
+        return view('portal.news', compact('category'));
+    }
+    public function republika_islam()
+    {
+        $response = Http::get('https://api-berita-indonesia.vercel.app/republika/islam/');
+        $category = $response->json();
+        if (isset($category['success']) && $category['success'] === false) {
+            // Redirect back dengan flash message
+            return redirect()->back()->with('error', $category['message']);
+        }
+        return view('portal.news', compact('category'));
+    }
+    public function republika_bola()
+    {
+        $response = Http::get('https://api-berita-indonesia.vercel.app/republika/bola/');
+        $category = $response->json();
+        if (isset($category['success']) && $category['success'] === false) {
+            // Redirect back dengan flash message
+            return redirect()->back()->with('error', $category['message']);
+        }
+        return view('portal.news', compact('category'));
+    }
+    public function republika_internasional()
+    {
+        $response = Http::get('https://api-berita-indonesia.vercel.app/republika/internasional/');
+        $category = $response->json();
+        if (isset($category['success']) && $category['success'] === false) {
+            // Redirect back dengan flash message
+            return redirect()->back()->with('error', $category['message']);
+        }
+        return view('portal.news', compact('category'));
+    }
+    public function republika_leisure()
+    {
+        $response = Http::get('https://api-berita-indonesia.vercel.app/republika/leisure/');
+        $category = $response->json();
+        if (isset($category['success']) && $category['success'] === false) {
+            // Redirect back dengan flash message
+            return redirect()->back()->with('error', $category['message']);
+        }
+        return view('portal.news', compact('category'));
+    }
+
+     // vendor three
+     public function jpnn_terbaru()
+     {
+         $response = Http::get('https://api-berita-indonesia.vercel.app/jpnn/terbaru/');
+         $category = $response->json();
+         if (isset($category['success']) && $category['success'] === false) {
+             // Redirect back dengan flash message
+             return redirect()->back()->with('error', $category['message']);
+         }
+         return view('portal.news', compact('category'));
+     }
+
+     // vendor five
+     public function cnn_terbaru()
+     {
+         $response = Http::get('https://api-berita-indonesia.vercel.app/cnn/terbaru/');
+         $category = $response->json();
+         if (isset($category['success']) && $category['success'] === false) {
+             // Redirect back dengan flash message
+             return redirect()->back()->with('error', $category['message']);
+         }
+         return view('portal.news', compact('category'));
+     }
+     public function cnn_nasional()
+     {
+         $response = Http::get('https://api-berita-indonesia.vercel.app/cnn/nasional/');
+         $category = $response->json();
+         if (isset($category['success']) && $category['success'] === false) {
+             // Redirect back dengan flash message
+             return redirect()->back()->with('error', $category['message']);
+         }
+         return view('portal.news', compact('category'));
+     }
+     public function cnn_internasional()
+     {
+         $response = Http::get('https://api-berita-indonesia.vercel.app/cnn/internasional/');
+         $category = $response->json();
+         if (isset($category['success']) && $category['success'] === false) {
+             // Redirect back dengan flash message
+             return redirect()->back()->with('error', $category['message']);
+         }
+         return view('portal.news', compact('category'));
+     }
+     public function cnn_ekonomi()
+     {
+         $response = Http::get('https://api-berita-indonesia.vercel.app/cnn/ekonomi/');
+         $category = $response->json();
+         if (isset($category['success']) && $category['success'] === false) {
+             // Redirect back dengan flash message
+             return redirect()->back()->with('error', $category['message']);
+         }
+         return view('portal.news', compact('category'));
+     }
+     public function cnn_olahraga()
+     {
+         $response = Http::get('https://api-berita-indonesia.vercel.app/cnn/olahraga/');
+         $category = $response->json();
+         if (isset($category['success']) && $category['success'] === false) {
+             // Redirect back dengan flash message
+             return redirect()->back()->with('error', $category['message']);
+         }
+         return view('portal.news', compact('category'));
+     }
+     public function cnn_teknologi()
+     {
+         $response = Http::get('https://api-berita-indonesia.vercel.app/cnn/teknologi/');
+         $category = $response->json();
+         if (isset($category['success']) && $category['success'] === false) {
+             // Redirect back dengan flash message
+             return redirect()->back()->with('error', $category['message']);
+         }
+         return view('portal.news', compact('category'));
+     }
+     public function cnn_gayaHidup()
+     {
+         $response = Http::get('https://api-berita-indonesia.vercel.app/cnn/gayaHidup/');
+         $category = $response->json();
+         if (isset($category['success']) && $category['success'] === false) {
+             // Redirect back dengan flash message
+             return redirect()->back()->with('error', $category['message']);
+         }
+         return view('portal.news', compact('category'));
+     }
+     public function cnn_hiburan()
+     {
+         $response = Http::get('https://api-berita-indonesia.vercel.app/cnn/hiburan/');
+         $category = $response->json();
+         if (isset($category['success']) && $category['success'] === false) {
+             // Redirect back dengan flash message
+             return redirect()->back()->with('error', $category['message']);
+         }
+         return view('portal.news', compact('category'));
+     }
 }

@@ -18,9 +18,8 @@
                     <h2>News Vendor</h2>
                     <p>Here are some of our news vendor</p>
                 </div>
-
                 <div class="row">
-                    <div class="col-lg-3 mx-auto col-md-6 col-sm-6">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="speaker" data-aos="fade-up" data-aos-delay="100">
                             <a href="{{ route('portal.vendorOne') }}"><img
                                     src="{{ asset('img/republika.png') }}" alt="republika_news"
@@ -37,14 +36,62 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 mx-auto col-md-6 col-sm-6">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="speaker" data-aos="fade-up" data-aos-delay="200">
                             <a href="{{ route('portal.vendorTwo') }}">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/CNN_Indonesia_logo.svg/2048px-CNN_Indonesia_logo.svg.png"
-                                    alt="CNN_news" class="img-fluid">
+                                <img src="{{ asset('img/antara.png')}}"
+                                    alt="Antara_news" class="img-fluid">
                             </a>
                             <div class="details">
-                                <h3><a href="{{ route('portal.vendorTwo') }}">CNN News</a></h3>
+                                <h3><a href="{{ route('portal.vendorTwo') }}">Antara News</a></h3>
+                                <p>Kumpulan berita yang berasal dari Antara News</p>
+                                <div class="social">
+                                    <a href=""><i class="bi bi-twitter"></i></a>
+                                    <a href=""><i class="bi bi-facebook"></i></a>
+                                    <a href=""><i class="bi bi-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="speaker" data-aos="fade-up" data-aos-delay="300">
+                            <a href="{{ route('portal.vendorThree') }}"><img
+                                    src="{{ asset('img/jpnn-logo.png') }}" alt="Jpnn_news"
+                                    class="img-fluid" /></a>
+                            <div class="details">
+                                <h3><a href="{{ route('portal.vendorThree') }}">JPNN News</a></h3>
+                                <p>Kumpulan berita yang berasal dari JPNN News</p>
+                                <div class="social">
+                                    <a href=""><i class="bi bi-twitter"></i></a>
+                                    <a href=""><i class="bi bi-facebook"></i></a>
+                                    <a href=""><i class="bi bi-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="speaker" data-aos="fade-up" data-aos-delay="300">
+                            <a href="{{ route('portal.vendorFour') }}"><img
+                                    src="{{ asset('img/kumparan.png') }}" alt="Kumparan_news"
+                                    class="img-fluid" /></a>
+                            <div class="details">
+                                <h3><a href="{{ route('portal.vendorFour') }}">Kumparan News</a></h3>
+                                <p>Kumpulan berita yang berasal dari Kumparan News</p>
+                                <div class="social">
+                                    <a href=""><i class="bi bi-twitter"></i></a>
+                                    <a href=""><i class="bi bi-facebook"></i></a>
+                                    <a href=""><i class="bi bi-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="speaker" data-aos="fade-up" data-aos-delay="300">
+                            <a href="{{ route('portal.vendorFive') }}"><img
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/CNN_Indonesia_logo.svg/2048px-CNN_Indonesia_logo.svg.png" alt="Kumparan_news"
+                                    class="img-fluid" /></a>
+                            <div class="details">
+                                <h3><a href="{{ route('portal.vendorFive') }}">CNN News</a></h3>
                                 <p>Kumpulan berita yang berasal dari CNN News</p>
                                 <div class="social">
                                     <a href=""><i class="bi bi-twitter"></i></a>
@@ -54,14 +101,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 mx-auto col-md-6 col-sm-6">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="speaker" data-aos="fade-up" data-aos-delay="300">
-                            <a href="{{ route('portal.vendorThree') }}"><img
-                                    src="{{ asset('img/jpnn-logo.png') }}" alt="Jpnn_news"
+                            <a href="{{ route('portal.vendorSix') }}"><img
+                                    src="{{asset('img/CNBC.png')}}" alt="CNBC_news"
                                     class="img-fluid" /></a>
                             <div class="details">
-                                <h3><a href="{{ route('portal.vendorThree') }}">JPNN News</a></h3>
-                                <p>Kumpulan berita yang berasal dari JPNN News</p>
+                                <h3><a href="{{ route('portal.vendorSix') }}">CNBC News</a></h3>
+                                <p>Kumpulan berita yang berasal dari CNBC News</p>
                                 <div class="social">
                                     <a href=""><i class="bi bi-twitter"></i></a>
                                     <a href=""><i class="bi bi-facebook"></i></a>
