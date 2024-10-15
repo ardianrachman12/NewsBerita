@@ -22,6 +22,7 @@ Route::get('/vendorThree', [PortalController::class, 'vendorThree'])->name('port
 Route::get('/vendorFour', [PortalController::class, 'vendorFour'])->name('portal.vendorFour');
 Route::get('/vendorFive', [PortalController::class, 'vendorFive'])->name('portal.vendorFive');
 Route::get('/vendorSix', [PortalController::class, 'vendorSix'])->name('portal.vendorSix');
+Route::get('/vendorSeven', [PortalController::class, 'vendorSeven'])->name('portal.vendorSeven');
 
 Route::prefix('/Antara')->group(function () {
     Route::get('/terbaru', [PortalController::class, 'antara_terbaru'])->name('portal.antara.terbaru');
@@ -58,4 +59,31 @@ Route::prefix('/CNN')->group(function () {
     Route::get('/internasional', [PortalController::class, 'cnn_internasional'])->name('portal.cnn.internasional');
     Route::get('/ekonomi', [PortalController::class, 'cnn_ekonomi'])->name('portal.cnn.ekonomi');
     Route::get('/gayaHidup', [PortalController::class, 'cnn_gayaHidup'])->name('portal.cnn.gayaHidup');
+});
+Route::prefix('/CNBC')->group(function () {
+    Route::get('/terbaru', [PortalController::class, 'cnbc_terbaru'])->name('portal.cnbc.terbaru');
+    Route::get('/investment', [PortalController::class, 'cnbc_investment'])->name('portal.cnbc.investment');
+    Route::get('/news', [PortalController::class, 'cnbc_news'])->name('portal.cnbc.news');
+    Route::get('/market', [PortalController::class, 'cnbc_market'])->name('portal.cnbc.market');
+    Route::get('/entrepreneur', [PortalController::class, 'cnbc_entrepreneur'])->name('portal.cnbc.entrepreneur');
+    Route::get('/syariah', [PortalController::class, 'cnbc_syariah'])->name('portal.cnbc.syariah');
+    Route::get('/tech', [PortalController::class, 'cnbc_tech'])->name('portal.cnbc.tech');
+    Route::get('/lifestyle', [PortalController::class, 'cnbc_lifestyle'])->name('portal.cnbc.lifestyle');
+    Route::get('/opini', [PortalController::class, 'cnbc_opini'])->name('portal.cnbc.opini');
+    Route::get('/profil', [PortalController::class, 'cnbc_profil'])->name('portal.cnbc.profil');
+});
+Route::prefix('/Sindo')->group(function () {
+    Route::get('/terbaru', [PortalController::class, 'sindonews_terbaru'])->name('portal.sindonews.terbaru');
+    Route::get('/nasional', [PortalController::class, 'sindonews_nasional'])->name('portal.sindonews.nasional');
+    Route::get('/metro', [PortalController::class, 'sindonews_metro'])->name('portal.sindonews.metro');
+    Route::get('/ekbis', [PortalController::class, 'sindonews_ekbis'])->name('portal.sindonews.ekbis');
+    Route::get('/international', [PortalController::class, 'sindonews_international'])->name('portal.sindonews.international');
+    Route::get('/daerah', [PortalController::class, 'sindonews_daerah'])->name('portal.sindonews.daerah');
+    Route::get('/sports', [PortalController::class, 'sindonews_sports'])->name('portal.sindonews.sports');
+    Route::get('/otomotif', [PortalController::class, 'sindonews_otomotif'])->name('portal.sindonews.otomotif');
+    Route::get('/tekno', [PortalController::class, 'sindonews_tekno'])->name('portal.sindonews.tekno');
+    Route::get('/sains', [PortalController::class, 'sindonews_sains'])->name('portal.sindonews.sains');
+    Route::get('/edukasi', [PortalController::class, 'sindonews_edukasi'])->name('portal.sindonews.edukasi');
+    Route::get('/lifestyle', [PortalController::class, 'sindonews_lifestyle'])->name('portal.sindonews.lifestyle');
+    Route::get('/kalam', [PortalController::class, 'sindonews_kalam'])->name('portal.sindonews.kalam');
 });

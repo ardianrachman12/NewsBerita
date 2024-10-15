@@ -117,6 +117,22 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="speaker" data-aos="fade-up" data-aos-delay="300">
+                            <a href="{{ route('portal.vendorSeven') }}"><img
+                                    src="https://www.sinkgard.com/wp-content/uploads/2022/03/qSiwktVlrLn7M5W0hMRJvToNTFA7KWg3.png" alt="Sindo_news"
+                                    class="img-fluid" /></a>
+                            <div class="details">
+                                <h3><a href="{{ route('portal.vendorSeven') }}">Sindo News</a></h3>
+                                <p>Kumpulan berita yang berasal dari Sindo News</p>
+                                <div class="social">
+                                    <a href=""><i class="bi bi-twitter"></i></a>
+                                    <a href=""><i class="bi bi-facebook"></i></a>
+                                    <a href=""><i class="bi bi-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section><!-- End Speakers Section -->
