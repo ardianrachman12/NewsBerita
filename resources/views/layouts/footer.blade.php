@@ -62,7 +62,7 @@
             &copy; Copyright <strong>BeritaNews</strong>. All Rights Reserved
         </div>
         <div class="credits">
-            Designed by <a href="">BootstrapMade</a>
+            Designed by <a href="/">BootstrapMade</a>
         </div>
     </div>
 </footer><!-- End  Footer -->
