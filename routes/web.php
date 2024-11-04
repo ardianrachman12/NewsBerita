@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PlayController;
 use App\Http\Controllers\PortalController;
 use Illuminate\Support\Facades\Route;
 
@@ -87,3 +88,6 @@ Route::prefix('/Sindo')->group(function () {
     Route::get('/lifestyle', [PortalController::class, 'sindonews_lifestyle'])->name('portal.sindonews.lifestyle');
     Route::get('/kalam', [PortalController::class, 'sindonews_kalam'])->name('portal.sindonews.kalam');
 });
+
+Route::get('/download' , [PlayController::class, 'index'])->name('download.index');
+Route::get('/downloadmp3/{id}', [PlayController::class, 'downloadMp3'])->name('downloadMp3');
