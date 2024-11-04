@@ -68,6 +68,10 @@ class PlayController extends Controller
         // Decode response dari API
         $response = json_decode($response->getBody(), true);
 
+        if ($response['status'] === 'fail') {
+            return redirect()->back()->with('error', 'Error: ' . $response['msg'], 400);
+        }
+
         // Kembalikan view dengan response dari API
         return view('playground.download', compact('response'));
     }

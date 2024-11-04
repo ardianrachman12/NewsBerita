@@ -90,4 +90,4 @@ Route::prefix('/Sindo')->group(function () {
 });
 
 Route::get('/download' , [PlayController::class, 'index'])->name('download.index');
-Route::get('/downloadmp3/{id}', [PlayController::class, 'downloadMp3'])->name('downloadMp3');
+Route::get('/downloadmp3', [PlayController::class, 'downloadMp3'])->name('downloadMp3');

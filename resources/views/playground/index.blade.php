@@ -4,7 +4,7 @@
         @include('layouts.alert')
         <div class="">
             <h1>Download mp3 Youtube</h1>
-            <form action="{{route('downloadMp3', ['id' => ':id'])}}" method="GET">
+            <form action="{{route('downloadMp3')}}" method="GET">
                 <div class="row">
                     <div class="col">
                         <input class="form-control" type="text" name="url" placeholder="masukkan url youtube">
