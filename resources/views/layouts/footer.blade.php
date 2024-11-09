@@ -14,10 +14,10 @@
                 <div class="col-lg-4 col-md-6 footer-links">
                     <h4>Useful Links</h4>
                     <ul>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="/">Home</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="/#about">About us</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="/#speakers">News Vendor</a></li>
+                        <li><i class="bi bi-chevron-right"></i> <a href="/download">YTMp3 Downloader</a></li>
                         <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
                     </ul>
                 </div>
@@ -44,10 +44,10 @@
                     </p>
 
                     <div class="social-links">
-                        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="github"><i class="bi bi-github"></i></a>
                         <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
                         <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="google-plus"><i class="bi bi-google"></i></a>
+                        <a href="#" class="email"><i class="bi bi-envelope-fill"></i></a>
                         <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
                     </div>
 
