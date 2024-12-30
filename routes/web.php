@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\API\ApiPortalController;
 use App\Http\Controllers\PlayController;
 use App\Http\Controllers\PortalController;
 use Illuminate\Support\Facades\Route;
@@ -91,3 +92,8 @@ Route::prefix('/Sindo')->group(function () {
 
 Route::get('/download' , [PlayController::class, 'index'])->name('download.index');
 Route::get('/downloadmp3', [PlayController::class, 'downloadMp3'])->name('downloadMp3');
+Route::get('/check-unfollow', [ApiPortalController::class, 'checkUnfollowers']);
+
+Route::get('play', function () {
+    return view('playground.playground');
+});

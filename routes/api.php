@@ -26,3 +26,7 @@ Route::get('/vendorOne', [ApiPortalController::class, 'vendorOne']);
 Route::get('/vendorFour', [ApiPortalController::class, 'vendorFour']);
 Route::get('/yutub', [ApiPortalController::class, 'getTikTokTags']);
 Route::post('/download', [ApiPortalController::class, 'downloadVideo']);
+
+Route::get('/check-unfollowers', [ApiPortalController::class, 'checkUnfollowers']);
+Route::post('/check-unfollower', [ApiPortalController::class, 'checkUnfollowers2'])->name('check-unfollower');
+
