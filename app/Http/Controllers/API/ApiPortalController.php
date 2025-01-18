@@ -4,6 +4,7 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Env;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Http;
 
@@ -37,7 +38,7 @@ class ApiPortalController extends Controller
         try {
             // Mengirim request ke API menggunakan Laravel HTTP Client
             $response = Http::withHeaders([
-                'X-RapidAPI-Key' => 'e88ff93c7fmsh740781e67c8eeccp1826c0jsnd01fe77bc88f',
+                'X-RapidAPI-Key' => env('RAPID_API_KEY'),
                 'Accept' => 'application/json',
             ])->get('https://tags-generator.p.rapidapi.com/youtubeTags/' . $query);
 
@@ -69,7 +70,7 @@ class ApiPortalController extends Controller
         //     $response = Http::withHeaders([
         //         'Content-Type' => 'application/json',
         //         'x-rapidapi-host' => 'tags-generator.p.rapidapi.com',
-        //         'x-rapidapi-key' => 'e88ff93c7fmsh740781e67c8eeccp1826c0jsnd01fe77bc88f',
+        //         'x-rapidapi-key' => env('RAPID_API_KEY'),
         //     ])->post('https://tags-generator.p.rapidapi.com/youtube/download?url='. urlencode($youtubeUrl), [
         //         'key1' => 'value',
         //         'key2' => 'value',
@@ -117,7 +118,7 @@ class ApiPortalController extends Controller
                 'headers' => [
                     'Content-Type' => 'application/json',
                     'x-rapidapi-host' => 'tags-generator.p.rapidapi.com',
-                    'x-rapidapi-key' => 'e88ff93c7fmsh740781e67c8eeccp1826c0jsnd01fe77bc88f',
+                    'x-rapidapi-key' => env('RAPID_API_KEY'),
                 ],
             ]);
 

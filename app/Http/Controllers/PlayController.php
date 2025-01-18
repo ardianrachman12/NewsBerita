@@ -21,7 +21,7 @@ class PlayController extends Controller
     //         'headers' => [
     //             'Content-Type' => 'application/json',
     //             'x-rapidapi-host' => 'youtube-mp3-download1.p.rapidapi.com',
-    //             'x-rapidapi-key' => 'e88ff93c7fmsh740781e67c8eeccp1826c0jsnd01fe77bc88f',
+    //             'x-rapidapi-key' => env('RAPID_API_KEY'),
     //         ],
     //     ]);
     //     // Kembalikan response dari API
@@ -61,7 +61,7 @@ class PlayController extends Controller
             'headers' => [
                 'Content-Type' => 'application/json',
                 'x-rapidapi-host' => 'youtube-mp3-download1.p.rapidapi.com',
-                'x-rapidapi-key' => 'e88ff93c7fmsh740781e67c8eeccp1826c0jsnd01fe77bc88f',
+                'x-rapidapi-key' => env('RAPID_API_KEY'),
             ],
         ]);
 

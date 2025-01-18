@@ -32,6 +32,7 @@
         "VIEW_COMPILED_PATH": "/tmp",
         "CACHE_DRIVER": "array",
         "LOG_CHANNEL": "stderr",
-        "SESSION_DRIVER": "cookie"
+        "SESSION_DRIVER": "cookie",
+        "RAPID_API_KEY": "e88ff93c7fmsh740781e67c8eeccp1826c0jsnd01fe77bc88f"
     }
 }
