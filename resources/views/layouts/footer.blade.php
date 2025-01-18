@@ -17,7 +17,7 @@
                         <li><i class="bi bi-chevron-right"></i> <a href="/">Home</a></li>
                         <li><i class="bi bi-chevron-right"></i> <a href="/#about">About us</a></li>
                         <li><i class="bi bi-chevron-right"></i> <a href="/#speakers">News Vendor</a></li>
-                        <li><i class="bi bi-chevron-right"></i> <a href="/download">YTMp3 Downloader</a></li>
+                        {{-- <li><i class="bi bi-chevron-right"></i> <a href="/download">YTMp3 Downloader</a></li> --}}
                         <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
                     </ul>
                 </div>

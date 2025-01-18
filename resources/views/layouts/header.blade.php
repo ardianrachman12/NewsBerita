@@ -29,7 +29,7 @@
                         </li> --}}
                     </ul>
                 </li>
-                <li><a class="nav-link scrollto" href="/download">Download YTMp3</a></li>
+                {{-- <li><a class="nav-link scrollto" href="/download">Download YTMp3</a></li> --}}
                 <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
